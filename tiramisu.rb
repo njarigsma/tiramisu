@@ -10,15 +10,15 @@ def print_progress_bar
 end
 
 #defining ingredients
-NUM_eggs = 4
-NUM_cream = 125
-NUM_mascarpone = 500
+NUM_EGGS = 4
+NUM_CREAM = 125
+NUM_MASCARPONE = 500
 
 ingredients = [
-  {name:"cream", quantity: NUM_cream},
+  {name:"cream", quantity: NUM_CREAM},
   {name:"sugar", quantity: 75},
-  {name:"eggs", quantity: NUM_eggs},
-  {name:"mascarpone", quantity: NUM_eggs},
+  {name:"eggs", quantity: NUM_EGGS},
+  {name:"mascarpone", quantity: NUM_MASCARPONE},
   {name:"amaretto", quantity: 5},
   {name:"espresso", quantity: 200},
   {name:"ladyfingers", quantity: 175},
@@ -67,4 +67,19 @@ print_divider
 puts "See below the different steps to follow: "
 steps.each_with_index do |step, index|
   puts (index + 1).to_s + ") " + step[:description]
+end
+
+#defining the step actions
+def generic_recipe_step
+  puts "On it!"
+  print_progress_bar
+end
+
+def separate_eggs
+  counter = 0
+  while counter < NUM_EGGS
+    counter += 1
+    print "Separate egg #{counter}"
+    print_progress_bar
+  end
 end
