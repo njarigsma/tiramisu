@@ -103,3 +103,7 @@ steps.each_with_index do |step, index|
   end
   send(step[:action])
   end
+
+#Done with making tiramisu
+print_divider
+puts "Presto! You're all done"
