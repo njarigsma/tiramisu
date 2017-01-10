@@ -60,3 +60,11 @@ steps = [
   {description: "Laat de schaal afgedekt minimaal 2 uur in de koelkast opstijven. Neem kort voor het serveren uit de koelkast. ", action: "leave_in_fridge"},
   {description: "Bestrooi de tiramisu met behulp van een zeefje met de cacaopoeder.", action: "sprinkle_cacao"},
 ]
+
+
+#printing out the steps
+print_divider
+puts "See below the different steps to follow: "
+steps.each_with_index do |step, index|
+  puts (index + 1).to_s + ") " + step[:description]
+end
