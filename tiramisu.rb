@@ -9,6 +9,7 @@ def print_progress_bar
   puts "\n"
 end
 
+#defining ingredients
 NUM_eggs = 4
 NUM_cream = 125
 NUM_mascarpone = 500
@@ -23,3 +24,10 @@ ingredients [
   {name:"ladyfingers", quantity: 175},
   {name:"cacao", quantity: 1},
 ]
+#printing ingredients
+puts "*       Let's make tiramisu!      *"
+print_divider
+puts "You will need the following ingredients"
+ingredients.each do |ingredient|
+puts "#{ingredient[:quantity]} #{ingredient[:name]}"
+end
